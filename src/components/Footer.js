@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid'
 
 const styles = {
   root: {
-    position: 'absolute',
+    position: '',
     bottom: 0,
     left: 0,
     right: 0,

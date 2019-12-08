@@ -1,7 +1,8 @@
-import React from 'react'
-import { withStyles } from '@material-ui/styles'
-import Typography from '@material-ui/core/Typography'
-import Grid from '@material-ui/core/Grid'
+import React from 'react';
+import { withStyles } from '@material-ui/styles';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import NetworkList from '../task1/NetworkList';
 
 const styles = theme => ({
   root: {
@@ -10,8 +11,8 @@ const styles = theme => ({
     backgroundColor: theme.palette.common.white,
     [theme.breakpoints.down('sm')]: {
       paddingLeft: 20,
-      paddingRight: 20,
-    },
+      paddingRight: 20
+    }
   },
   title: {
     color: theme.palette.primary.main,
@@ -19,26 +20,23 @@ const styles = theme => ({
     marginBottom: 44,
 
     [theme.breakpoints.down('sm')]: {
-      fontSize: 30,
-    },
+      fontSize: 30
+    }
   }
-})
+});
 
-const NetworkSection = (props) => {
-  const { classes } = props
+const NetworkSection = props => {
+  const { classes } = props;
   return (
-    <Grid
-      container
-      justify={'center'}
-      className={classes.root}
-    >
+    <Grid container justify={'center'} className={classes.root}>
       <Grid item xs={12} sm={10} md={8}>
         <Typography variant={'h4'} className={classes.title}>
-          Networks
+        Networks
+          <NetworkList />
         </Typography>
       </Grid>
     </Grid>
-  )
-}
+  );
+};
 
-export default withStyles(styles)(NetworkSection)
+export default withStyles(styles)(NetworkSection);

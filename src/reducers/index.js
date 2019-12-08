@@ -1,5 +1,11 @@
-import app from './appReducer'
+import { combineReducers } from 'redux'
+import {setUser} from './appReducer'
 
-export default {
-  app,
-}
+
+export default combineReducers({
+  setUser,
+
+})
+
+
+
